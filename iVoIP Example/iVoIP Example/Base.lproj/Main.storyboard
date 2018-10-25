@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.15" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iVoIP_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8a0-g9-xjW">
+                                <rect key="frame" x="165.5" y="71" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ws-th-PVc">
+                                <rect key="frame" x="219.5" y="76.5" width="10" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5ws-th-PVc" secondAttribute="height" id="NSI-WW-YMk"/>
+                                    <constraint firstAttribute="width" constant="10" id="hfa-mg-l5E"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8W-4L-KyQ">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="callButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7hM-3T-hc7"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wC-FR-Csq">
+                                <rect key="frame" x="160" y="373.5" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8a0-g9-xjW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="8UU-Nw-XQK"/>
+                            <constraint firstItem="8wC-FR-Csq" firstAttribute="top" secondItem="m8W-4L-KyQ" secondAttribute="bottom" constant="25" id="SQK-cd-UXv"/>
+                            <constraint firstItem="m8W-4L-KyQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ub9-IF-2tT"/>
+                            <constraint firstItem="m8W-4L-KyQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aHt-db-piT"/>
+                            <constraint firstItem="8wC-FR-Csq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lD4-pm-981"/>
+                            <constraint firstItem="5ws-th-PVc" firstAttribute="leading" secondItem="8a0-g9-xjW" secondAttribute="trailing" constant="10" id="poo-Wj-Txx"/>
+                            <constraint firstItem="8a0-g9-xjW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="swV-FU-5Bu"/>
+                            <constraint firstItem="5ws-th-PVc" firstAttribute="centerY" secondItem="8a0-g9-xjW" secondAttribute="centerY" id="weg-Pr-1XU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="callButton" destination="m8W-4L-KyQ" id="KGj-Xq-6M8"/>
+                        <outlet property="durationLabel" destination="8wC-FR-Csq" id="uGt-jd-t6W"/>
+                        <outlet property="statusView" destination="5ws-th-PVc" id="53S-sP-fD8"/>
+                        <outlet property="welcomeLabel" destination="8a0-g9-xjW" id="m5p-DH-iEm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
